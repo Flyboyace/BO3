@@ -1,1 +1,1 @@
-- SIgma read me
+read me
