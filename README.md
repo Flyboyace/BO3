@@ -10,7 +10,9 @@ Pickup
 
 ![Tutorial 4 pickup met score](https://github.com/user-attachments/assets/c82178b8-7b5d-4667-9cdb-ef129cd4eae1)
 
+Movement
+
+![Movement](https://github.com/user-attachments/assets/7b7c36d3-1b2d-4f73-a220-e15dbc4b3f9b)
 
 
-
-ace en kareem.
+Ace en Kareem.
