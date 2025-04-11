@@ -11,13 +11,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float gravity = 9.8f;
     [SerializeField]
-    private float jumpCooldown = 6f;
+    private float jumpCooldown = 0.5f;
 
     private Vector3 velocity;
     private bool canJump = true;
     private bool isGrounded;
 
-    private float groundCheckDistance = 1.2f; // Slightly increased for better detection
+    private float groundCheckDistance = 2f; // Slightly increased for better detection
     private LayerMask groundLayer;
 
     private Animator _animator;
@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             Debug.Log("Grounded!");
+
+            canJump = true;    
         }
         else
         {
@@ -77,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = new Vector3(_rb.velocity.x, jumpSpeed, _rb.velocity.z);
         _animator.SetTrigger("Jump");
         canJump = false;
-        StartCoroutine(JumpCooldownCoroutine());
+      //  StartCoroutine(JumpCooldownCoroutine());
     }
 
     private IEnumerator JumpCooldownCoroutine()
